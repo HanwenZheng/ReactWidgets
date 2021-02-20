@@ -1,0 +1,35 @@
+.Card {
+  box-sizing: border-box;
+  padding: 20px;
+  background-position: center;
+  background-size:cover;
+  border-radius: 10px;
+  height: 80vh;
+  flex: 0.5;
+  color: white;
+  margin: 10px;
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAPCAMAAAAxmgQeAAAACVBMVEX///8AAAD///9+749PAAAAAXRSTlMAQObYZgAAAD5JREFUGNN1j9EKADAIAnP//9GjFq6w7iU4DNRsB06cb44TJ+UzYUcniqnqoA6ag/62JhjKIU0rxx1lKveuXJ5UAQs/G/2vAAAAAElFTkSuQmCC),auto;
+  position: relative;
+  transition: flex 0.4s ease-in;
+  overflow: hidden;
+  span {
+    font-size: 20px;
+    position: absolute;
+    bottom: 7vh;
+    left: 5vh;
+    opacity: 0.8;
+    transition: all 0.8s;
+    width: 80%;
+  }
+}
+
+.Card:hover {
+  flex: 5;
+  span {
+    font-size: 30px;
+    font-weight: bolder;
+    opacity: 1;
+    bottom: 20vh;
+    left: 5vh;
+  }
+}

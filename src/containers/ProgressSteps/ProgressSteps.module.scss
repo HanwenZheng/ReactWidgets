@@ -1,0 +1,46 @@
+.ProgressSteps {
+  .stepsWrapper {
+    display: flex;
+    width: 50vw;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 100px;
+    position: relative;
+    .circle {
+      height: 20px;
+      width: 20px;
+      text-align: center;
+      line-height: 20px;
+      font-weight: bolder;
+      color: azure;
+      background-color: lightgray;
+      border-radius: 50%;
+      z-index: 100;
+      transition: background-color 500ms;
+    }
+    .active {
+      background-color: dodgerblue;
+    }
+    .line {
+      height: 3px;
+      background-color: lightgray;
+      position: absolute;
+      width: 48vw;
+    }
+    .line2 {
+      height: 3px;
+      background-color: dodgerblue;
+      position: absolute;
+      transition: width 500ms;
+    }
+  }
+  .btnWrapper {
+    width: 154px;
+    margin: 10px auto 0;
+    Button {
+      width: 75px;
+      margin: 0 1px;
+    }
+  }
+}
