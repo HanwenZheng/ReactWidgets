@@ -4,7 +4,7 @@ import { Button } from "reactstrap";
 
 class ProgressSteps extends Component {
   state = {
-    active: 0,
+    active: 1,
   };
 
   steps = 4;
