@@ -1,12 +1,12 @@
 import React from "react";
-import { ExpandCard, ProgressSteps } from "./containers";
+// import { ExpandCard, ProgressSteps } from "./containers";
 import Aux from "./hoc/Auxiliary";
 
 const App = () => {
   return (
     <Aux>
-      <ExpandCard />
-      <ProgressSteps />
+      {/*<ExpandCard />*/}
+      {/*<ProgressSteps />*/}
     </Aux>
   );
 };
