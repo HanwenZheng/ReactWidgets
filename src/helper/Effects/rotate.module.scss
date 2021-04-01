@@ -1,0 +1,28 @@
+.enter,
+.enterActive,
+.enterDone,
+.exit,
+.exitActive,
+.exitDone {
+  transform-origin: top left;
+}
+
+.enter,
+.exitDone {
+  transform: rotate(0);
+}
+
+.enterActive {
+  transform: rotate(-20deg);
+  transition: transform 1000ms;
+}
+
+.exit,
+.enterDone {
+  transform: rotate(-20deg);
+}
+
+.exitActive {
+  transform: rotate(0);
+  transition: transform 1000ms;
+}

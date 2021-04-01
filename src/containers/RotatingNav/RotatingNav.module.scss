@@ -1,0 +1,17 @@
+.RotatingNav {
+  overflow-x: hidden;
+}
+
+$button-size: 50px;
+.menu {
+  Button {
+    z-index: 9999;
+    width: $button-size;
+    height: $button-size;
+    position: absolute;
+  }
+}
+
+.content {
+  margin: 0 $button-size;
+}

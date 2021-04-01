@@ -1,3 +1,4 @@
 import ExpandCard from "./ExpandCard/ExpandCard";
 import ProgressSteps from "./ProgressSteps/ProgressSteps";
-export { ExpandCard, ProgressSteps };
+import RotatingNav from "./RotatingNav/RotatingNav";
+export { ExpandCard, ProgressSteps, RotatingNav };
