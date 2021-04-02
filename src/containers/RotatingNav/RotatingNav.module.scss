@@ -8,7 +8,33 @@ $button-size: 50px;
     z-index: 9999;
     width: $button-size;
     height: $button-size;
+    position: fixed;
+  }
+}
+
+.nav {
+  transform: rotate(-20deg);
+  transform-origin: top left;
+  position: absolute;
+  left: -999px;
+  Button {
+    width: $button-size;
+    height: $button-size;
     position: absolute;
+    transform: rotate(20deg);
+    transform-origin: top right;
+    left: -$button-size/2;
+  }
+  $initMargin: $button-size * 7;
+  $spaceBetween: $button-size/2;
+  Button:nth-child(1) {
+    top: $initMargin;
+  }
+  Button:nth-child(2) {
+    top: $initMargin + $button-size + $spaceBetween;
+  }
+  Button:nth-child(3) {
+    top: $initMargin + ($button-size + $spaceBetween) * 2;
   }
 }
 
