@@ -24,7 +24,7 @@ const RotatingNav = (props) => {
             setMenu(!menu);
           }}
         >
-          <CSSTransition in={menu} classNames={fadeIn} timeout={1000}>
+          <CSSTransition in={menu} classNames={fadeOff} timeout={1000}>
             <div>{!menu && <FontAwesomeIcon icon={faBars} />}</div>
           </CSSTransition>
           <CSSTransition in={!menu} classNames={fadeOff} timeout={1000}>

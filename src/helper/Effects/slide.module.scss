@@ -4,18 +4,25 @@
 .exit,
 .exitActive,
 .exitDone {
+  position: absolute;
 }
 
 .enter,
 .exitDone {
+  left: -999px;
 }
 
 .enterActive {
+  left: 0;
+  transition: left 1000ms;
 }
 
 .exit,
 .enterDone {
+  left: 0;
 }
 
 .exitActive {
+  left: -999px;
+  transition: left 1000ms;
 }
