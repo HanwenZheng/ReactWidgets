@@ -9,7 +9,8 @@ import {
 const App = () => {
   return (
     <Fragment>
-      <RippleButton />
+      <RippleButton variant="blue">Button</RippleButton>
+      <RippleButton variant="purple">Button</RippleButton>
       {/*<RotatingNav>*/}
       {/*  <h1>TeaRoyal</h1>*/}
       {/*  <h2>*/}
