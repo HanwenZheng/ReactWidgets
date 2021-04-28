@@ -9,9 +9,15 @@ class RippleButton extends Component {
   handleClick = (e) => {
     e.preventDefault();
     if (this.props.onClick) this.props.onClick();
+    if (this.props.to) {
+      setTimeout(() => {
+        this.props.history.push(this.props.to);
+      }, 1000);
+    }
     if (!this.state.ripples) {
-      let x = e.clientX - e.target.offsetLeft;
-      let y = e.clientY - e.target.offsetTop;
+      let rect = e.target.getBoundingClientRect();
+      let x = e.clientX - rect.left;
+      let y = e.clientY - rect.top;
       let ripple = document.createElement("span");
       ripple.style.left = x / 16 + "rem";
       ripple.style.top = y / 16 + "rem";
@@ -35,15 +41,16 @@ class RippleButton extends Component {
           this.props.variant === "purple" ? styles.purple : "",
         ].join(" ")}
       >
-        <a href="#" onClick={this.handleClick}>
+        <a
+          onClick={this.state.ripples ? null : this.handleClick}
+          style={this.props.disabled ? { fontWeight: "bold" } : {}}
+        >
           {this.props.children}
           {
             <span
               key={Math.random()}
               ref={(node) => {
-                node &&
-                  this.state.ripples &&
-                  node.appendChild(this.state.ripples);
+                node && this.state.ripples && node.appendChild(this.state.ripples);
               }}
             />
           }
